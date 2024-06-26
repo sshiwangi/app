@@ -1,11 +1,13 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import devlaunch from '../assets/devlaunch.png'
 import { IoMdLogOut } from "react-icons/io";
 import Input from './Input';
 
-
-export default function Sidebar() {
+interface SidebarProps {
+  children: ReactNode;
+}
+export default function Sidebar({children}:SidebarProps ) {
   return (
     <div className="flex h-screen bg-gray-900">
 
@@ -19,11 +21,11 @@ export default function Sidebar() {
     </div>
 
 
-    <div className="flex flex-col flex-1 overflow-y-auto">
+    <div className=" flex-1 ">
       
         <div className="p-4 ">
-            <h1 className="text-2xl text-white font-bold">Welcome to my dashboard!</h1>
-            <Input/>
+           
+        {children}
         
         </div>
     </div>
