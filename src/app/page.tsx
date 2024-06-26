@@ -23,7 +23,7 @@ export default function Home() {
         ))}
       </div>
 
-      <div>
+      <>
         <Input
           value={input}
           onChange={event => {
@@ -48,7 +48,7 @@ export default function Home() {
           }}
         />
      
-      </div>
+      </>
     </Sidebar>
   );
 }
