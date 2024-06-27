@@ -11,15 +11,19 @@ export default function Sidebar({children}:SidebarProps ) {
   return (
     <div className="flex h-screen bg-gray-900">
 
-    <div className="flex flex-col w-28 bg-gray-800">
+     <div className=" flex-col justify-between w-28 bg-gray-800">
         
         
-       <Image  className='rounded-3xl p-4' objectFit="cover"alt ='devlaunch'src={devlaunch}/>
-       <IoMdLogOut size ={44}color='white' className='ml-7'/>
+     
   
-    </div>
 
+ 
+  <aside className="flex h-[calc(100vh_-_2rem)]  flex-col items-center justify-between  py-6">
 
+        <span> <Image  className='rounded-3xl p-4' objectFit="cover"alt ='devlaunch'src={devlaunch}/></span> 
+     <span> <IoMdLogOut size ={44}color='white' className='ml-7  '/></span> 
+        </aside>
+        </div>
     <div className=" flex-1 p-4 relative">
               
         {children}
