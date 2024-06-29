@@ -24,7 +24,7 @@ export default function Sidebar({children}:SidebarProps ) {
         <span> <Image  className='rounded-3xl p-4' objectFit="cover"alt ='devlaunch'src={devlaunch}/></span> 
      <span> 
       
-      <IoMdLogOut size ={44}color='white' className='  '/></span> 
+  <button>   <IoMdLogOut size ={44}color='white' className='  '/> </button> </span> 
 
         </aside>
         </div>

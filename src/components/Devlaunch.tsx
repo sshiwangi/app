@@ -9,7 +9,7 @@ export default function DevLaunch() {
 <>
 <div className='flex justify-center  items-center'>
 
-    <Image  className=' h-34 w-36 mt-8 bg-red-400 rounded-3xl' objectFit="cover"alt ='devlaunch'src={devlaunch}/>
+    <Image  className=' h-28 w-28 mt-8 bg-red-400 rounded-3xl' objectFit="cover"alt ='devlaunch'src={devlaunch}/>
 
     </div>
      <div className="mx-auto mt-8  bg-gray-700	rounded-lg max-w-xl lg:text-center">
