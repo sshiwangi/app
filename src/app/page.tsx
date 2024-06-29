@@ -5,6 +5,7 @@ import { Message, continueConversation } from '../lib/actions';
 import { readStreamableValue } from 'ai/rsc';
 import Sidebar from '@/components/Sidebar';
 import Input from '@/components/Input';
+import DevLaunch from '@/components/Devlaunch';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
@@ -24,6 +25,7 @@ export default function Home() {
       </div>
 
       <>
+      <DevLaunch/>
         <Input
           value={input}
           onChange={event => {

@@ -11,7 +11,7 @@ interface InputProps{
 export default function Input({value, onChange, onClick}: InputProps) {
   
   return (
-  <div className='absolute p-4 bottom-4 w-full justify-center flex left-0'>
+  <div className='absolute p-8 bottom-4 w-full justify-center flex left-0'>
       <div className=" w-1/3">
         <div className=' flex border rounded border-gray-500'>
           <input className="shadow appearance-none border text-white rounded w-full py-3 px-3  bg-slate-800" onChange={onChange} value={value} id="username" type="text" placeholder="Enter your message"/>
