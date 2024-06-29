@@ -25,10 +25,10 @@ export default function Home() {
       </div>
 
       <>
-      <DevLaunch/>
+        <DevLaunch />
         <Input
           value={input}
-          onChange={event => {
+          onChange={(event) => {
             setInput(event.target.value);
           }}
           onClick={async () => {
@@ -49,7 +49,6 @@ export default function Home() {
             }
           }}
         />
-     
       </>
     </Sidebar>
   );
