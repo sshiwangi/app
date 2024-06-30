@@ -24,32 +24,30 @@ export default function Home() {
         ))}
       </div>
 
-      <>
-        <DevLaunch />
-        <Input
-          value={input}
-          onChange={(event) => {
-            setInput(event.target.value);
-          }}
-          onClick={async () => {
-            const { messages, newMessage } = await continueConversation([
-              ...conversation,
-              { role: 'user', content: input },
+      <DevLaunch />
+      <Input
+        value={input}
+        onChange={(event) => {
+          setInput(event.target.value);
+        }}
+        onClick={async () => {
+          const { messages, newMessage } = await continueConversation([
+            ...conversation,
+            { role: 'user', content: input },
+          ]);
+
+          let textContent = '';
+
+          for await (const delta of readStreamableValue(newMessage)) {
+            textContent = `${textContent}${delta}`;
+
+            setConversation([
+              ...messages,
+              { role: 'assistant', content: textContent },
             ]);
-
-            let textContent = '';
-
-            for await (const delta of readStreamableValue(newMessage)) {
-              textContent = `${textContent}${delta}`;
-
-              setConversation([
-                ...messages,
-                { role: 'assistant', content: textContent },
-              ]);
-            }
-          }}
-        />
-      </>
+          }
+        }}
+      />
     </Sidebar>
   );
 }

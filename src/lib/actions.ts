@@ -18,7 +18,7 @@ export async function continueConversation(history: Message[]) {
     const { textStream } = await streamText({
       model: openai('gpt-3.5-turbo'),
       system:
-        "You are a dude that doesn't drop character until the DVD commentary.",
+        'You are a guide for freelance developers and give them a better profile description based on their skills and experience',
       messages: history,
     });
 
