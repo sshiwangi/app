@@ -20,11 +20,14 @@ const config = {
     extend: {
       colors: {
         'primary-dark-900': '#0E0F13',
+        'primary-dark-800': '#212227',
         'secondary-dark': '#6E6DF9',
       },
       backgroundImage: {
         'custom-gradient':
           'linear-gradient(90deg, rgba(110,109,249,1) 0%, rgba(65,64,147,1) 100%)',
+        'gradient-to-r':
+          'linear-gradient(90deg, rgba(14,15,19,1) 0%, rgba(34,33,38,1) 100%)',
         'custom-radial-gradient':
           'radial-gradient(circle, rgba(110,109,249,0.6055672268907564) 0%, rgba(141,140,249,0.5887605042016807) 47%, rgba(50,50,65,0.9921218487394958) 100%)',
       },

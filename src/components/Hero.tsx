@@ -15,7 +15,7 @@ function Hero() {
           description based on your unique skills.
         </p>
         <button className="bg-custom-gradient rounded-xl text-white font-medium py-2 px-4">
-          Get Started
+          <a href="/auth"> Get Started</a>
         </button>
       </div>
       {/* <div className="h-100 w-100 rounded-full absolute left-0 bg-custom-radial-gradient"></div> */}
